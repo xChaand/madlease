@@ -32,9 +32,8 @@ export default function Home() {
             and <span className="text-red-600">subleasing</span>.
           </h1>
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
-            MadLease: Your key to hassle-free leasing! Discover the perfect
-            tenant or find your dream lease effortlessly on our dynamic online
-            marketplace.
+            Hassle-free leasing! Discover the perfect tenant or find your dream
+            lease effortlessly on our dynamic online marketplace.
           </p>
           <div className="flex flex-col justify-center sm:flex-row gap-4 mt-6">
             <Link href="/lease" className={buttonVariants()}>
