@@ -9,6 +9,7 @@ export default function NavbarItems() {
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
   const isAnyOpen = activeIndex !== null;
   const navbarRef = useRef<HTMLDivElement | null>(null);
+  useOnClickOutside(navbarRef, () => setActiveIndex(null));
   return (
     <div className="flex gap-4 h-full" ref={navbarRef}>
       {PRODUCT_CATEGORIES.map((category, i) => {
@@ -18,8 +19,6 @@ export default function NavbarItems() {
         };
 
         const isOpen = i === activeIndex;
-
-        useOnClickOutside(navbarRef, () => setActiveIndex(null));
 
         return (
           <NavbarItem
